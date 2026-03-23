@@ -1,16 +1,19 @@
 package boardGameStore;
 
 public class Strategy extends Product {
-
-	public Strategy(int prodId, ProductCategory prodCat, String prodName, double cost, int quantity, double prodPrice) {
-		super(prodId, prodCat, prodName, cost, quantity, prodPrice);
+	
+	/*
+	 Represents a strategy board game which the user can buy
+	 */
+	public Strategy(int prodId, String prodName, double cost, int quantity, double prodPrice) {
+		super(prodId, ProductCategory.BOARDGAME, prodName, cost, quantity, prodPrice);
 		
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.getProductId()+";"+this.getProductCategory()+"; strategy;"+this.getProductName()+";"
+				+this.getQuantityInStock()+";"+this.getPurchaseCost();
 	}
 
 }
